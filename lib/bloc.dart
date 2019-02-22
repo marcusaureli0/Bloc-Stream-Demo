@@ -34,4 +34,9 @@ class Bloc {
     // Adiciona ao Stream (in) do contador um novo valor
     _streamInCounter.add(_counter);
   }
+
+  void dispose() {
+    _counterStreamController.close();
+    _countEventController.close();
+  }
 }

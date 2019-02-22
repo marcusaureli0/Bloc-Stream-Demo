@@ -74,4 +74,10 @@ class _MyHomePageState extends State<MyHomePage> {
           children: _getActionButtons(),
         ));
   }
+
+  @override
+  void dispose() {
+    widget.bloc.dispose();
+    super.dispose();
+  }
 }
